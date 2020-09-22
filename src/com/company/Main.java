@@ -4,19 +4,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        printBonusDatesBetween(10, 2015);
+        printBonusDatesBetween(0, 20150);
 
     }
 
     static void printBonusDatesBetween (int fromYear, int toYear){
 
 
-           while (fromYear < toYear){
+           while (fromYear < toYear ){
 
                if(fromYear<1000){
                    fromYear++;
                    continue;
+               }else if(fromYear >9999){
+                   break;
                }
+
 
                int dayUnit = fromYear /1000;
                int dayDecimal = fromYear %1000 /100;
